@@ -1,0 +1,95 @@
+课堂笔记1
+一、web项目开发软件的选取
+1.node.js
+2.dit
+3.bower
+4.gulp
+5.yeoman
+
+二、软件安装和使用
+1.node.js
+	
+2.npm
+(1)>npm -v
+(2)>npm install -global(全局) <module name>
+	>npm install --save-dev <module name>
+(3)>npm install -- save-dev jquery@1.11.1
+(4)>npm list -g
+set path=f:\mytest;%path%
+(5)>npm update <module name>(更新)
+(6)>npm uninstall <module name>(反安装--删除已经安装的软件)
+(7)>批量安装
+>npm init 
+
+3.bower
+>npm install -g bower
+>bower -v
+>bower help
+>bower install jquery
+>bower install jquery#3.3.1
+>bower seach html5-boilerplate
+CLI
+
+>bower update
+>bower uninstall juery
+>批量安装
+>bower init
+
+4.gulp
+>gulp -v(version)
+>gulpfile.js
+	var gulp=require('gulp'),
+		concat=require('concat');
+	gulp.task("test",function(){
+		gulp.src('src/js/*.js')
+			.pipe(concat('all.js'))
+			.pipe(gulp.dest('dist/js'))
+	})
+>gulp test 
+
+5.yeoman(yo)
+>npm install -global yo
+>yo --version
+>yo -- help
+>配置生成器
+
+
+
+课堂笔记2
+题目：git操作实践
+1.安装
+(1)下载
+
+(2)安装
+
+(3)查看版本号
+>git --version
+
+2.建立本地库
+(1)创建目录
+>mkdir /f/swj/swjgh
+(2)初始化
+>git init
+(3)创建文件
+(4)配置管理者
+>git config --global user.email "1851341315@qq.com"
+>git config --global user.name "lxy-lxy"
+(5)添加文件到本地文库
+>git add 文件名
+>git commit -m "说明内容"
+(6)查看提交情况
+>git status
+>git log
+3.建立github仓库
+(1)创建并添加秘要
+本地创建
+>ssh-keygen
+将.ssh复制到仓库文件夹中
+远程添加到SSH(id-rsa.pub内容)
+(2)建立远程连接
+>git remote add git@github.com:lxy-lxy/myblog.git
+(3)查看远程仓库信息
+>git remote show origin
+(4)将本地内容上传到远程仓库中
+>git push origin master
+(5)
